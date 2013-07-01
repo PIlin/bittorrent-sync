@@ -1,8 +1,8 @@
 # Maintainer: Dalton Miller
 # Contributor: Kilian Lackhove kilian@lackhove.de
 pkgname=bittorrent-sync
-pkgver=1.1.15
-pkgrel=3
+pkgver=1.1.22
+pkgrel=1
 epoch=1
 pkgdesc="BitTorrent Sync"
 arch=('i686' 'x86_64' 'arm' 'armv6h')
@@ -17,13 +17,13 @@ sha256sums=('b2240a8356c24356ca83bc2f9dcf759ceaa7dcdbbec45f5cc8cd0928b8f89df5'
 
 if [ "$CARCH" == x86_64 ]; then
 	source+=("http://syncapp.bittorrent.com/$pkgver/btsync_x64-$pkgver.tar.gz")
-	sha256sums+=('3224fc8584a5680510b2bf61dc02069e518b7298a2d0648a7ced1d01d4a8c92e')
+	sha256sums+=('1e202f5edc7dd9fbf4abdabe62f28f9bdb7aec803c17410cc2d8d9e7dfcd9123')
 elif [ "$CARCH" == i686 ]; then
 	source+=("http://syncapp.bittorrent.com/$pkgver/btsync_i386-$pkgver.tar.gz")
-        sha256sums+=('cdc07a40f43cb5220aa289c0ea1e1ecebe8f8b31335c3a1ad4cb435f41ad1484')
+        sha256sums+=('abedcc3c0ba971250ec43abf3a4cafdf812bf1796f26c9a6beef3a4519645bdd')
 elif [ "$CARCH" == arm ] || [ "$CARCH" == armv6h ]; then
         source+=("http://syncapp.bittorrent.com/$pkgver/btsync_arm-$pkgver.tar.gz")
-        sha256sums+=('a86d941d627a60d3424c5785fa8f1b74f458810c2101aab741db8330bcdf3391')
+        sha256sums+=('df4e11eb44286d1f46fcd6d055a65e8250e2a3543d9821f401019ccb265e806e')
 fi
 
 build() {
